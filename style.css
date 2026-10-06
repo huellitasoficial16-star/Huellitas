@@ -1,0 +1,148 @@
+:root {
+    --hueso: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text y='26' font-size='26'>🦴</text></svg>") 4 4;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fbf2ec;
+    color: #111;
+    cursor: var(--hueso), auto;
+}
+a,
+button,
+summary,
+label {
+    cursor: var(--hueso), pointer;
+}
+header {
+    height: 110px;
+    background-color: #946640;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+header h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+header h2 img {
+    height: 75px;
+}
+header nav {
+    display: flex;
+    gap: 30px;
+}
+header nav a {
+    text-decoration: none;
+    color: #111;
+    font-weight: bold;
+    font-size: 17px;
+}
+header nav a:hover {
+    text-decoration: underline;
+}
+main {
+    display: flex;
+    gap: 30px;
+    padding: 45px 20px;
+}
+#menu {
+    width: 220px;
+    height: fit-content;
+    padding: 20px;
+    background-color: #f5e4b2;
+    border: 2px solid #946640;
+    border-radius: 20px;
+}
+#menu h3 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+#menu ol {
+    padding-left: 25px;
+}
+#menu li {
+    margin-bottom: 12px;
+}
+#menu a {
+    text-decoration: none;
+    color: #111;
+    font-weight: bold;
+    font-size: 17px;
+}
+#menu a:hover {
+    text-decoration: underline;
+}
+#contenido {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+.descripcion {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+#demo {
+    width: 900px;
+    max-width: 100%;
+    height: 500px;
+    margin-bottom: 40px;
+    background-color: #e8d8c8;
+    border: 3px solid #946640;
+    border-radius: 20px;
+    overflow: hidden;
+}
+#demo .carousel-inner,
+#demo .carousel-item {
+    height: 100%;
+}
+#demo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #946640;
+    text-align: center;
+}
+@media (max-width: 700px) {
+    header {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    header nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    main {
+        flex-direction: column;
+    }
+    #menu {
+        width: 100%;
+    }
+    h1 {
+        font-size: 26px;
+    }
+    #demo {
+        height: 250px;
+    }
+}
