@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rescatistas - HuelliTas</title>
+    <link rel="stylesheet" href="rescatistas.css">
+</head>
+<body>
+    <header>
+        <h2><img src="img/logo.png" alt="Logo HuelliTas"> Huellitas</h2>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="#">Soy rescatista ▼</a>
+            <a href="adoptante.html">Soy adoptante ▼</a>
+            <a href="login.html">👤</a>
+        </nav>
+    </header>
+
+    <h1 class="titulo">Rescatistas</h1>
+
+    <!-- DESPLEGABLE: SOY RESCATISTA -->
+    <details class="info-rescatista">
+        <summary>Soy rescatista</summary>
+
+        <p>
+            En Huellitas UTL, los rescatistas desempeñan un papel fundamental dentro de la plataforma.
+            Son los encargados de publicar información sobre los perros disponibles para adopción,
+            incluyendo fotografías, características, estado de salud y otros datos relevantes que
+            permitan a los posibles adoptantes conocer mejor a cada mascota.
+        </p>
+
+        <p>
+            Para ello, Huellitas UTL funciona como un intermediario que proporciona información y
+            orientación sobre cómo reportar estas situaciones ante las autoridades o instituciones
+            correspondientes. Una vez recibida la información, el rescatista puede realizar el reporte
+            y tomar las acciones necesarias para brindar apoyo al animal afectado.
+        </p>
+
+        <p>
+            De esta manera, Huellitas UTL conecta a adoptantes, rescatistas y ciudadanos interesados
+            en el bienestar animal, fomentando la adopción responsable y contribuyendo a una comunidad
+            más solidaria con los perros en situación de vulnerabilidad.
+        </p>
+    </details>
+
+    <main class="formulario">
+        <h2>👤 DATOS DEL RESCATISTA</h2>
+        <div class="fila">
+            <div class="campo campo-grande">
+                <label>Nombre completo</label>
+                <input type="text">
+            </div>
+            <div class="campo campo-pequeno">
+                <label>Edad</label>
+                <input type="number">
+            </div>
+        </div>
+        <div class="fila">
+            <div class="campo">
+                <label> Teléfono</label>
+                <input type="text">
+            </div>
+            <div class="campo">
+                <label> Correo electrónico</label>
+                <input type="email">
+            </div>
+        </div>
+        <div class="campo completo">
+            <label>Ubicación</label>
+            <input type="text">
+        </div>
+        <div class="pregunta">
+            <label>Eres</label>
+            <div class="opciones">
+                <input type="radio" name="tipo_rescatista" id="refugio">
+                <label for="refugio"> Rescatista y tengo un refugio</label>
+                <input type="radio" name="tipo_rescatista" id="independiente">
+                <label for="independiente">Rescatista independiente,tengo a los perros en mi casa o pensiones</label>
+                <input type="radio" name="tipo_rescatista" id="encontrado">
+                <label for="encontrado">Me he encontrado un perro y le estoy buscando casa.</label>
+                <input type="radio" name="tipo_rescatista" id="ayudando">
+                <label for="ayudando">Estoy ayudando a alguien
+                    a darlo en adopción.</label>
+            </div>
+        </div>
+        <div class="pregunta">
+            <label>
+                ¿Dónde están los perros que anuncias? En tu casa, en un refugio, en una pensión,
+                en hogar temporal...</label>
+            <div class="opciones">
+                <input type="radio" name="ubicacion_perros" id="refugio_perros">
+                <label for="refugio_perros">Refugio</label>
+                <input type="radio" name="ubicacion_perros" id="casa_perros">
+                <label for="casa_perros">En mi casa</label>
+                <input type="radio" name="ubicacion_perros" id="pension">
+                <label for="pension">En pensión</label>
+                <input type="radio" name="ubicacion_perros" id="hogar">
+                <label for="hogar">
+                    En hogar temporal
+                </label>
+                <input type="radio" name="ubicacion_perros"id="calle">
+                <label for="calle"> En la calle</label>
+            </div>
+        </div>
+        <div class="fila">
+            <div class="campo">
+                <label>¿Dónde entregas a los perros?</label>
+                <input type="text">
+            </div>
+            <div class="campo">
+                <label>¿Entregas a los perros esterilizados?</label>
+                <input type="text">
+            </div>
+        </div>
+        <div class="campo completo">
+            <label>
+                Si no eres tú, ¿quién es la persona responsable  del rescate? Nombre, email, celular.
+            </label>
+            <input type="text">
+        </div>
+        <div class="fila">
+            <div class="campo">
+                <label>¿Cuántos perros tienes ahora a tu cargo?</label>
+                <input type="number">
+            </div>
+            <div class="campo">
+
+                <label>¿Pides cuota de adopción? ¿De cuánto?</label>
+                <input type="text">
+            </div>
+        </div>
+        <div class="fila">
+            <div class="campo">
+                <label>
+                    ¿Cuál es el perro más difícil de dar en adopción de los que tienes?¿Por qué?
+                </label>
+                <input type="text">
+            </div>
+            <div class="campo">
+                <label>¿Cómo es tu proceso de adopción?</label>
+                <input type="text">
+            </div>
+        </div>
+
+        <!-- EXPERIENCIA Y CUIDADO -->
+        <h2>🐶 EXPERIENCIA Y CUIDADO</h2>
+
+        <div class="fila">
+            <div class="pregunta">
+                <label>¿Has tenido mascotas antes?</label>
+                <div class="opciones">
+                    <input type="radio" name="mascotas_antes" id="antes_si">
+                    <label for="antes_si">Sí</label>
+                    <input type="radio" name="mascotas_antes" id="antes_no">
+                    <label for="antes_no">No</label>
+                </div>
+            </div>
+            <div class="pregunta">
+                <label>¿Tienes otras mascotas actualmente?</label>
+                <div class="opciones">
+                    <input type="radio" name="otras_mascotas" id="otras_si">
+                    <label for="otras_si">Sí</label>
+                    <input type="radio" name="otras_mascotas" id="otras_no">
+                    <label for="otras_no">No</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="campo completo">
+            <label>Si respondiste que sí, ¿cuántas mascotas tienes?</label>
+            <input type="number">
+        </div>
+
+        <div class="pregunta">
+            <label>
+                ¿Te comprometes a brindarle alimentación, atención, veterinaria, cariño y un hogar
+                seguro durante su vida?
+            </label>
+            <div class="opciones">
+                <input type="radio" name="compromiso" id="compromiso_si">
+                <label for="compromiso_si">Sí, me comprometo</label>
+                <input type="radio" name="compromiso" id="compromiso_no">
+                <label for="compromiso_no">No</label>
+            </div>
+        </div>
+
+        <button class="enviar"type="button"> Continuar</button>
+    </main>
+</body>
+</html>
