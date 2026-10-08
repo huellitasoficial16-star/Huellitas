@@ -1,0 +1,232 @@
+:root {
+    --hueso: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text y='26' font-size='26'>🦴</text></svg>") 4 4;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fbf2ec;
+    color: #111;
+    cursor: var(--hueso), auto;
+}
+a,
+button,
+summary,
+label {
+    cursor: var(--hueso), pointer;
+}
+header {
+    height: 110px;
+    background-color: #946640;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+header h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+header h2 img {
+    height: 45px;
+}
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+header nav a {
+    color: #111;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+}
+header nav a:hover {
+    text-decoration: underline;
+}
+main {
+    padding: 30px 40px 50px 40px;
+}
+.titulo {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+.publicar {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+.tarjeta {
+    flex: 1;
+    padding: 25px;
+    background-color: #eceeee;
+}
+.tarjeta h2 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+.info {
+    display: flex;
+    gap: 25px;
+}
+
+/* RECUADRO DE LA IMAGEN */
+#foto {
+    display: none;
+}
+.imagen {
+    position: relative;
+    width: 200px;
+    height: 220px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 15px;
+    text-align: center;
+    background-color: #bfa896;
+    border: 2px solid #5b4636;
+    box-shadow: 3px 3px 0 #333;
+    overflow: hidden;
+}
+.imagen .camara {
+    font-size: 60px;
+}
+.imagen strong {
+    font-size: 12px;
+}
+.imagen small {
+    font-size: 12px;
+}
+.imagen img {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.imagen.con-foto img {
+    display: block;
+}
+.imagen.con-foto .camara,
+.imagen.con-foto strong,
+.imagen.con-foto small {
+    display: none;
+}
+
+/* DATOS */
+.datos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.datos label {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+.datos input {
+    height: 32px;
+    border: none;
+    background-color: #cce7f7;
+    box-shadow: 0 2px 0 #888;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    outline: none;
+}
+.datos input:focus {
+    box-shadow: 0 2px 0 #946640;
+}
+
+/* SEXO Y TAMAÑO */
+fieldset {
+    border: none;
+    margin-bottom: 25px;
+}
+legend {
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+.opciones {
+    display: flex;
+    gap: 20px;
+}
+.opciones input[type="radio"] {
+    display: none;
+}
+.opciones label {
+    width: 90px;
+    height: 85px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    background-color: #bfa896;
+    border: 2px solid #5b4636;
+    box-shadow: 3px 3px 0 #333;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+}
+.opciones label span {
+    font-size: 26px;
+    line-height: 1;
+}
+.opciones label:hover {
+    background-color: #ad9582;
+}
+.opciones input[type="radio"]:checked + label {
+    background-color: #946640;
+    color: white;
+}
+.opciones .chico {
+    font-size: 20px;
+}
+.opciones .medio {
+    font-size: 28px;
+}
+.opciones .grande {
+    font-size: 36px;
+}
+
+@media (max-width: 800px) {
+    header {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    header nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    main {
+        padding: 20px;
+    }
+    .publicar {
+        flex-direction: column;
+    }
+    .tarjeta {
+        width: 100%;
+    }
+    .info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .datos {
+        width: 100%;
+    }
+}
