@@ -1,0 +1,202 @@
+/* ESTILOS GENERALES Y COLORES BASE */
+:root {
+    --bg-main: #fbf9f1;
+    --header-footer-bg: #8c6239;
+    --accent-blue: #d0e1f9;
+    --border-blue: #9ab5db;
+    --text-purple: #6b63b5; /* Tono lila/azulado de los títulos */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: #333;
+}
+
+/* ENCABEZADO */
+.main-header {
+    background-color: var(--header-footer-bg);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.logo-container .logo {
+    width: 60px;
+    height: 60px;
+}
+
+.nav-links, .user-session {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* CONTENEDOR DEL FORMULARIO */
+.form-wrapper {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #f4efdb; /* Fondo ligeramente más oscuro para el contenedor */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.back-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+/* SECCIONES */
+.form-section {
+    background: #ffffff;
+    border: 1px solid #e0dbcc;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.form-section h2 {
+    color: #7b73cc;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* INPUTS Y FILAS */
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label, .form-section label {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.input-group input, textarea {
+    background-color: var(--accent-blue);
+    border: 1px solid var(--border-blue);
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 0.9rem;
+}
+
+.full-width { width: 100%; }
+.small-width { width: 120px; }
+.half-width { width: 50%; }
+
+/* BOTONES DE OPCIÓN (TIPO PASTILLA) */
+.options-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+.opt-btn {
+    background-color: var(--accent-blue);
+    border: 1px solid var(--border-blue);
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.85rem;
+    transition: background 0.2s;
+}
+
+.opt-btn:hover, .opt-btn.active {
+    background-color: #b5d1f7;
+}
+
+.questions-grid {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.question-box {
+    flex: 1;
+    font-size: 0.8rem;
+}
+
+.question-box p {
+    margin-bottom: 5px;
+}
+
+.sub-question {
+    font-size: 0.8rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* ACCIONES / BOTONES FINALES */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.75rem;
+    margin-bottom: 20px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-cancel {
+    background: white;
+    border: 1px solid #333;
+    padding: 10px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-submit {
+    background-color: var(--accent-blue);
+    border: 1px solid var(--border-blue);
+    padding: 10px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* PIE DE PÁGINA */
+.main-footer {
+    background-color: var(--header-footer-bg);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-social {
+    font-size: 1.2rem;
+}
+
+.footer-link {
+    text-decoration: underline;
+    cursor: pointer;
+}
