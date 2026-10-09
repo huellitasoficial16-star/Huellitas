@@ -5,9 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Adoptantes - Huellitas</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background-color: #fcf9f3; }
+    .navbar { background-color: #8b5e3c !important; }
+    .btn-huellitas { background-color: #6c5ab5; color: #fff; }
+    .btn-huellitas:hover { background-color: #5a4a9c; color: #fff; }
+  </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+  <nav class="navbar navbar-expand-lg navbar-dark mb-4">
     <div class="container">
       <a class="navbar-brand" href="../index.html">Huellitas</a>
       <div class="navbar-nav">
@@ -15,13 +21,13 @@
         <a class="nav-link active" href="modulo-adoptantes.html">Adoptantes</a>
         <a class="nav-link" href="../PartPaul/modulo-rescatistas.html">Rescatistas</a>
         <a class="nav-link" href="../huellitasweb/modulo-solicitudes.html">Solicitudes</a>
-        <a class="nav-link" href="index.html">Formulario</a>
+        <a class="nav-link" href="adoptante.html">Formulario</a>
       </div>
     </div>
   </nav>
 
   <div class="container mb-3">
-    <a href="index.html" class="btn btn-outline-primary">Ir al formulario de Arturo</a>
+    <a href="adoptante.html" class="btn btn-huellitas">Ir al formulario de adoptante</a>
   </div>
 
   <div class="container" id="app"></div>
@@ -33,11 +39,15 @@
       title: 'Adoptantes',
       key: 'adoptantes',
       fields: [
-        {name:"nombre", label:"Nombre"},
-        {name:"correo", label:"Correo", type:"email"},
+        {name:"nombre", label:"Nombre completo"},
+        {name:"edad", label:"Edad", type:"number"},
         {name:"telefono", label:"Teléfono", type:"tel"},
-        {name:"ciudad", label:"Ciudad"},
-        {name:"vivienda", label:"Vivienda", type:"select", options:["Casa","Departamento"]}
+        {name:"correo", label:"Correo electrónico", type:"email"},
+        {name:"ubicacion", label:"Ubicación"},
+        {name:"vivienda", label:"Tipo de vivienda", type:"select", options:["Casa","Departamento","Otro"]},
+        {name:"patio", label:"¿Patio o espacio al aire libre?", type:"select", options:["Sí","No"]},
+        {name:"convivencia", label:"¿Vive solo o con familia?", type:"select", options:["Solo","Con familia"]},
+        {name:"acuerdo", label:"¿Todos de acuerdo con la adopción?", type:"select", options:["Sí","No"]}
       ]
     });
   </script>
