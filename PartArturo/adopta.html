@@ -12,19 +12,23 @@
       <a class="navbar-brand" href="../index.html">Huellitas</a>
       <div class="navbar-nav">
         <a class="nav-link" href="../PartAlan/modulo-mascotas.html">Mascotas</a>
-        <a class="nav-link" href="../PartArturo/modulo-adoptantes.html">Adoptantes</a>
+        <a class="nav-link active" href="modulo-adoptantes.html">Adoptantes</a>
         <a class="nav-link" href="../PartPaul/modulo-rescatistas.html">Rescatistas</a>
         <a class="nav-link" href="../huellitasweb/modulo-solicitudes.html">Solicitudes</a>
+        <a class="nav-link" href="index.html">Formulario</a>
       </div>
     </div>
   </nav>
+
+  <div class="container mb-3">
+    <a href="index.html" class="btn btn-outline-primary">Ir al formulario de Arturo</a>
+  </div>
 
   <div class="container" id="app"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../js/crud.js"></script>
   <script>
-    // Solo cambia esta configuración en tu módulo
     initCrud({
       title: 'Adoptantes',
       key: 'adoptantes',
