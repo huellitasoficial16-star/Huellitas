@@ -11,28 +11,25 @@
     <!-- ENCABEZADO -->
     <header class="main-header">
         <div class="logo-container">
-            <img src="logohuellitas.jpg" alt="Huellitas Logo" class="logo"> <!-- Reemplaza con tu ruta de imagen -->
+            <img src="logohuellitas.jpg" alt="Huellitas Logo" class="logo">
         </div>
         <nav class="nav-links">
-            <span class="dropdown">Soy rescatista ▾</span>
-            <span class="dropdown">Soy adoptante ▾</span>
+            <a href="../index.html">Inicio</a>
+            <a href="../PartPaul/recatar.html">Soy rescatista ▾</a>
+            <a href="adoptante.html">Soy adoptante ▾</a>
         </nav>
         <div class="user-session">
-            <span>Iniciar sesión</span>
-            <div class="header-icons">
-                <a href="../index.html">Inicio</a>
-                <a href="../login.html">Iniciar Sesion</a>
-            </div>
+            <a href="../PartAlan/login.html">Iniciar sesión</a>
         </div>
     </header>
 
     <!-- CONTENEDOR PRINCIPAL DEL FORMULARIO -->
     <main class="form-wrapper">
-        <button type="button" class="back-button" onclick="location.href='../index.html'">←</button>
-        <a href="../huellitasweb/huellitas.html" style="margin-left:12px; color:inherit; font-size:14px;">Ver catálogo (huellitas.html)</a>
+        <button type="button" class="back-button" onclick="location.href='../index.html'" aria-label="Volver al inicio">←</button>
+        <a href="../huellitasweb/huellitas.html" class="catalog-link">Ver catálogo (huellitas.html)</a>
 
         <form class="adoption-form">
-            
+
             <!-- SECCIÓN 1 -->
             <section class="form-section">
                 <h2> 1.- DATOS PERSONALES.</h2>
@@ -129,14 +126,14 @@
                 </div>
             </section>
 
-           <!-- SECCIÓN 4 -->
-<section class="form-section">
-    <h2> 4.- MOTIVACIÓN.</h2>
-    <div class="input-group full-width">
-        <label>¿POR QUÉ QUIERES ADOPTAR A ESTE PERRITO/A?</label>
-        <textarea rows="4"></textarea>
-    </div>
-</section>
+            <!-- SECCIÓN 4 -->
+            <section class="form-section">
+                <h2> 4.- MOTIVACIÓN.</h2>
+                <div class="input-group full-width">
+                    <label>¿POR QUÉ QUIERES ADOPTAR A ESTE PERRITO/A?</label>
+                    <textarea rows="4"></textarea>
+                </div>
+            </section>
 
             <!-- SECCIÓN 5 -->
             <section class="form-section">
@@ -145,9 +142,9 @@
                     <input type="checkbox" id="terms">
                     <label for="terms">ACEPTO QUE LA INFORMACIÓN PROPORCIONADA SERÁ ENVIADA AL RESCATISTA RESPONSABLE DEL ANIMAL PARA DARLE SEGUIMIENTO A MI SOLICITUD</label>
                 </div>
-                
+
                 <div class="form-actions">
-                    <button type="button" class="btn-cancel">CANCELAR</button>
+                    <button type="button" class="btn-cancel" onclick="location.href='../index.html'">CANCELAR</button>
                     <button type="submit" class="btn-submit">ENVIAR SOLICITUD</button>
                 </div>
             </section>
@@ -158,14 +155,25 @@
     <!-- PIE DE PÁGINA -->
     <footer class="main-footer">
         <p>Una segunda oportunidad para cada patita</p>
-        <div class="footer-social">
-            
-        </div>
+        <div class="footer-social"></div>
         <p class="footer-link">Aviso de privacidad</p>
         <div class="footer-help">
             <span> ¿Tienes dudas? ¡Escríbenos! huellitas@gmail.com</span>
         </div>
     </footer>
+
+    <!-- Una sola opción seleccionada por pregunta -->
+    <script>
+        document.querySelectorAll('.options-row').forEach(function (grupo) {
+            var botones = grupo.querySelectorAll('.opt-btn');
+            botones.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    botones.forEach(function (b) { b.classList.remove('active'); });
+                    btn.classList.add('active');
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
