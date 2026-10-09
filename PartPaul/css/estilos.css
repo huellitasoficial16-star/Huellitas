@@ -1,4 +1,4 @@
- *{
+*{
     box-sizing:border-box;
     margin:0;
     padding:0;
@@ -13,11 +13,13 @@ body{
 /* HEADER */
 
 header{
-    height:95px;
+    min-height:95px;
     background:#986640;
     display:flex;
     align-items:center;
     justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
     padding:5px 18px;
     border-bottom:2px solid #333;
 }
@@ -26,39 +28,100 @@ header{
     width:85px;
     height:85px;
     object-fit:contain;
+    display:block;
 }
+
+
+/* MENÚ (BOTONES TIPO PASTILLA) */
 
 nav{
     display:flex;
     align-items:center;
-    gap:150px;
+    gap:18px;
 }
 
 nav a{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    background:#c7e1f4;
     color:#000;
     text-decoration:none;
-    font-size:11px;
+    font-size:12px;
+    font-weight:bold;
+    padding:9px 20px;
+    border:1px solid #555;
+    border-radius:999px;
+    box-shadow:0 2px 2px #6d4a2c;
+    transition:background .2s, color .2s, transform .1s, box-shadow .2s;
+}
+
+nav a:hover{
+    background:#dbeefa;
+    transform:translateY(-1px);
+    box-shadow:0 4px 6px #6d4a2c;
+}
+
+nav a:active{
+    transform:scale(.96);
+}
+
+/* Página actual */
+nav a[aria-current="page"]{
+    background:#7b73cc;
+    color:#fff;
+    border-color:#fff;
+}
+
+nav a:focus-visible,
+.inicio a:focus-visible,
+.logo-link:focus-visible{
+    outline:3px solid #fff;
+    outline-offset:3px;
 }
 
 nav i{
     font-size:9px;
-    margin-left:5px;
 }
+
+
+/* SESIÓN E ICONOS */
 
 .inicio{
     text-align:center;
 }
 
 .inicio small{
-    font-size:10px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.inicio > a{
+    color:#000;
+    text-decoration:none;
+}
+
+.inicio > a:hover small{
+    text-decoration:underline;
 }
 
 .inicio aside{
     margin-top:4px;
     display:flex;
     justify-content:center;
-    gap:9px;
+    gap:12px;
     font-size:25px;
+}
+
+.inicio aside a{
+    color:#000;
+    text-decoration:none;
+    transition:color .2s, transform .1s;
+}
+
+.inicio aside a:hover{
+    color:#fff;
+    transform:scale(1.12);
 }
 
 
@@ -381,8 +444,20 @@ footer a{
 
 @media(max-width:700px){
 
+    header{
+        justify-content:center;
+        padding:10px 15px;
+    }
+
     nav{
-        gap:20px;
+        gap:8px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    nav a{
+        padding:7px 14px;
+        font-size:11px;
     }
 
     main{
