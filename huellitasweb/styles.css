@@ -11,6 +11,7 @@
 body {
     background-color: #f7f4ee;
     color: #333;
+    cursor: var(--hueso), auto;
 }
 
 /* Barra de navegación */
@@ -188,4 +189,21 @@ article.card:hover {
     section.cards-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Enlaces "soy rescatista" y "soy adoptante" con el mismo aspecto de antes */
+a.dropdown {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Cursor de huesito en elementos clicables (va al final para que pise los cursor: pointer anteriores) */
+a,
+button,
+summary,
+label,
+.dropdown,
+.back-arrow,
+.adopt-btn {
+    cursor: var(--hueso), pointer;
 }
